@@ -1,0 +1,16 @@
+
+version: '3.7'
+
+services:
+  django_gunicorn:
+    restart: unless-stopped
+    volumes:
+      - ./feedback:/app/feedback
+    build: 
+      context: .
+
+    ports: 
+      - 22121:80
+
+volumes:
+  feedback:
