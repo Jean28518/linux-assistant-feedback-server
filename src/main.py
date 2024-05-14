@@ -17,9 +17,9 @@ async def submit(feedback: Feedback):
     now = datetime.now()
     file_name = now.strftime("%Y-%m-%d_%H:%M:%S") + ".json"
     f = open("./feedback/" + file_name, "a")
-    feedback_string = json.dumps(feedback, indent=4)
-    # f.write(feedback.json(indent=4))
-    f.write(feedback_string)
+    # feedback_string = json.dumps(feedback, indent=4)
+    f.write(feedback.json(indent=4))
+    # f.write(feedback_string)
     f.close()
 
     
